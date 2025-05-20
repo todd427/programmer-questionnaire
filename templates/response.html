@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='response.css') }}">
+</head>
+<body>
+    <div class="response-container">
+        <div class="response-card">
+            <div class="success-icon">✓</div>
+            <h1>{{ data.message }}</h1>
+            
+            <div class="submission-details">
+                <h2>Submission Details</h2>
+                <div class="detail-item">
+                    <span class="label">Name:</span>
+                    <span class="value">{{ data.details.name }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Experience:</span>
+                    <span class="value">{{ data.details.experience }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Primary Language:</span>
+                    <span class="value">{{ data.details.primary_language }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Submitted:</span>
+                    <span class="value">{{ data.details.submission_time }}</span>
+                </div>
+            </div>
+            
+            <a href="/" class="back-button">Submit Another Response</a>
+        </div>
+    </div>
+</body>
+</html> 

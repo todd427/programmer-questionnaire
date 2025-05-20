@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programmer Experience Questionnaire</title>
+  <link rel="stylesheet" href="quest.css">
+  <script src="quest.js"></script>
+</head>
+<body>
+  <div id="programmer-questionnaire">
+    <h2>🧠 Programmer Experience Level Questionnaire</h2>
+    <form id="experience-form" method="POST" action="/submit">
+      <fieldset>
+        <legend>1. General Background</legend>
+        <label>First Name:</label>
+        <input type="text" name="first-name" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="last-name" required>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="18" max="100" required>
+
+        <label>Years of experience:</label>
+        <select name="years">
+          <option value="<1">Less than 1 year</option>
+          <option value="1–2">1–2 years</option>
+          <option value="3–5">3–5 years</option>
+          <option value="6–10">6–10 years</option>
+          <option value="10+">10+ years</option>
+        </select>
+
+        <label>Primary language:</label>
+        <input type="text" name="primary-language">
+
+        <label>Other languages (check all that apply):</label><br>
+        <label><input type="checkbox" name="languages" value="Python"> Python</label><br>
+        <label><input type="checkbox" name="languages" value="JavaScript"> JavaScript</label><br>
+        <label><input type="checkbox" name="languages" value="Java"> Java</label><br>
+        <label><input type="checkbox" name="languages" value="C++"> C/C++</label><br>
+        <label><input type="checkbox" name="languages" value="Go"> Go</label><br>
+        <label><input type="checkbox" name="languages" value="Rust"> Rust</label><br>
+        <label><input type="checkbox" name="languages" value="Other"> Other: <input type="text" name="other-language"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Problem-Solving & Algorithms</legend>
+        <label>Can you implement basic algorithms?</label>
+        <select name="algorithms">
+          <option>Yes</option>
+          <option>With some help</option>
+          <option>Not confidently</option>
+        </select>
+
+        <label>Used complex data structures?</label>
+        <select name="data-structures">
+          <option>Frequently</option>
+          <option>Occasionally</option>
+          <option>Only in tutorials</option>
+          <option>Never</option>
+        </select>
+
+        <label>Do you solve coding challenges?</label>
+        <select name="challenges">
+          <option>Yes, weekly</option>
+          <option>Occasionally</option>
+          <option>Rarely</option>
+          <option>Never</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Software Development Practices</legend>
+        <label>Familiarity with Git:</label>
+        <select name="git">
+          <option>Expert</option>
+          <option>Basic commands</option>
+          <option>Learning</option>
+          <option>Never used</option>
+        </select>
+
+        <label>Worked with CI/CD pipelines?</label>
+        <select name="ci-cd">
+          <option>Set it up myself</option>
+          <option>Used in a team</option>
+          <option>Not yet</option>
+        </select>
+
+        <label>How do you test code?</label>
+        <select name="testing">
+          <option>Unit tests</option>
+          <option>Integration tests</option>
+          <option>Manual testing only</option>
+          <option>Rarely test</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Project & Collaboration Experience</legend>
+        <label>Open-source contributions?</label>
+        <select name="open-source">
+          <option>Yes</option>
+          <option>Interested</option>
+          <option>No</option>
+        </select>
+
+        <label>Largest project you've worked on:</label>
+        <textarea name="largest-project" rows="2"></textarea>
+
+        <label>Experience with Agile/Scrum?</label>
+        <select name="agile">
+          <option>Yes</option>
+          <option>Somewhat familiar</option>
+          <option>No</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. System Design & Deployment</legend>
+        <label>Designed a system architecture?</label>
+        <select name="architecture">
+          <option>Yes, professionally</option>
+          <option>Yes, personal projects</option>
+          <option>Not yet</option>
+        </select>
+
+        <label>Familiarity with concepts:</label>
+        <select name="concepts">
+          <option>Strong understanding</option>
+          <option>Basic familiarity</option>
+          <option>No</option>
+        </select>
+
+        <label>Deployment experience?</label>
+        <select name="deployment">
+          <option>Frequently</option>
+          <option>A few times</option>
+          <option>Never</option>
+        </select>
+
+        <label>Platforms/tools used:</label><br>
+        <label><input type="checkbox" name="platforms" value="AWS"> AWS</label><br>
+        <label><input type="checkbox" name="platforms" value="Docker"> Docker</label><br>
+        <label><input type="checkbox" name="platforms" value="Kubernetes"> Kubernetes</label><br>
+        <label><input type="checkbox" name="platforms" value="GitHub Actions"> GitHub Actions</label><br>
+        <label><input type="checkbox" name="platforms" value="Other"> Other: <input type="text" name="platform-other"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>6. Learning & Interests</legend>
+        <label>Favorite development areas:</label><br>
+        <label><input type="checkbox" name="interests" value="Web"> Web Development</label><br>
+        <label><input type="checkbox" name="interests" value="Game"> Game Development</label><br>
+        <label><input type="checkbox" name="interests" value="AI"> Machine Learning/AI</label><br>
+        <label><input type="checkbox" name="interests" value="DevOps"> DevOps</label><br>
+        <label><input type="checkbox" name="interests" value="Other"> Other: <input type="text" name="interests-other"></label><br><br>
+
+        <label>How often do you learn new tech?</label>
+        <select name="learning">
+          <option>Constantly</option>
+          <option>Every few months</option>
+          <option>When needed</option>
+          <option>Rarely</option>
+        </select>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

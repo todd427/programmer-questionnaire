@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Programmer Experience Questionnaire</title>
+</head>
+<body>
+<!-- Paste the full component here -->
+<div id="programmer-questionnaire" style="max-width: 700px; margin: auto; font-family: sans-serif; padding: 1em; border: 1px solid #ccc; border-radius: 8px;">
+  <h2>🧠 Programmer Experience Level Questionnaire</h2>
+
+  <form id="experience-form" method="POST" action="/submit">
+    <fieldset>
+      <legend><strong>1. General Background</strong></legend>
+      <label>Years of experience:</label><br>
+      <select name="years">
+        <option value="<1">Less than 1 year</option>
+        <option value="1–2">1–2 years</option>
+        <option value="3–5">3–5 years</option>
+        <option value="6–10">6–10 years</option>
+        <option value="10+">10+ years</option>
+      </select><br><br>
+
+      <label>Primary language:</label><br>
+      <input type="text" name="primary-language"><br><br>
+    </fieldset>
+
+    <br><button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>

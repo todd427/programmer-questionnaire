@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover: #357abd;
+  --background-color: #f5f7fa;
+  --card-background: #ffffff;
+  --text-color: #2c3e50;
+  --border-color: #e1e8ed;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 40px 20px;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+#programmer-questionnaire {
+  max-width: 800px;
+  margin: auto;
+  background: var(--card-background);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+fieldset {
+  margin-bottom: 25px;
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+fieldset:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 10px;
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  transition: var(--transition);
+  font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: var(--primary-color);
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  margin-left: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+  
+  #programmer-questionnaire {
+    padding: 20px;
+  }
+  
+  fieldset {
+    padding: 15px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    padding: 10px;
+  }
+} 
